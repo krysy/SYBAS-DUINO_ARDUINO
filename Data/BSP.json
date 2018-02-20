@@ -21,10 +21,10 @@
 					{
 						"online": "https://www.google.com"
 					},
-					"url": "https://github.com/OLIMEX/Arduino_configurations/raw/master/PIC/Versions/Olimex_PIC-1.1.1.zip",
-					"archiveFileName": "Olimex_PIC-1.1.1.zip",
-					"checksum": "SHA-256:d315e9a698d18bbf628794d1775819171e32467903914a04c0ded73bd041e200",
-					"size": "1584965",
+					"url": "https://raw.githubusercontent.com/krysy/SYBAS-DUINO_ARDUINO/master/Data/1.0.0.zip",
+					"archiveFileName": "1.0.0.zip",
+					"checksum": "SHA-256:3756269284725FB13087DC82E02B716E8FD04BADA598243C0D0F9D2871096A35",
+					"size": "1464865",
 					"boards":
 					[
 						{"name": "Sybas Duino E-13"},
