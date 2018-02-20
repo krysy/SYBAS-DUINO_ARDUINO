@@ -27,7 +27,7 @@
 					"size": "1464865",
 					"boards":
 					[
-						{"name": "DUINO-E13"},
+						{"name": "DUINO-E13"}
 					],
 					"toolsDependencies":
 					[
