@@ -21,7 +21,7 @@
 					{
 						"online": "https://www.google.com"
 					},
-					"url": "https://raw.githubusercontent.com/krysy/SYBAS-DUINO_ARDUINO/master/Data/1.0.0.zip",
+					"url": "http://localhost/1.0.0.zip",
 					"archiveFileName": "1.0.0.zip",
 					"checksum": "SHA-256:3756269284725FB13087DC82E02B716E8FD04BADA598243C0D0F9D2871096A35",
 					"size": "1464865",
@@ -132,48 +132,6 @@
 							"archiveFileName": "pic32prog-armlinux_2_0_224.tar.gz",
 							"size": "174996",
 							"checksum": "SHA-256:6FAEDF08D76FA87C8ACC93C3B52E2BB6B63DAD518015AD0F65E03EBC0D1B8032"
-						}
-					]
-				},
-				{
-					"name": "drivers-windows",
-					"version": "v2",
-					"systems":
-					[
-						{
-							"host": "i686-mingw32",
-							"url": "https://github.com/chipKIT32/chipKIT-drivers/releases/download/v2.0/chipKIT_USB_drivers_windows_v2.zip",
-							"archiveFileName": "chipKIT_USB_drivers_windows_v2.zip",
-							"size": "962019",
-							"checksum": "SHA-256:39F16651C21F451D106B8CDA5281D16129D755A73728E976A725341F3F671A5F"
-						},
-						{
-							"host": "i386-apple-darwin11",
-							"url": "https://github.com/chipKIT32/chipKIT-drivers/releases/download/v2.0/chipKIT_USB_drivers_otherOSes_v2.zip",
-							"archiveFileName": "chipKIT_USB_drivers_otherOSes_v2.zip",
-							"size": "162",
-							"checksum": "SHA-256:83320249BEAF1BD023A7E42DA0A8717421681B62F070331DF6084048F8D763F8"
-						}, 
-						{
-							"host": "x86_64-linux-gnu",
-							"url": "https://github.com/chipKIT32/chipKIT-drivers/releases/download/v2.0/chipKIT_USB_drivers_otherOSes_v2.zip",
-							"archiveFileName": "chipKIT_USB_drivers_otherOSes_v2.zip",
-							"size": "162",
-							"checksum": "SHA-256:83320249BEAF1BD023A7E42DA0A8717421681B62F070331DF6084048F8D763F8"
-						}, 
-						{
-							"host": "i686-pc-linux-gnu", 
-							"url": "https://github.com/chipKIT32/chipKIT-drivers/releases/download/v2.0/chipKIT_USB_drivers_otherOSes_v2.zip",
-							"archiveFileName": "chipKIT_USB_drivers_otherOSes_v2.zip",
-							"size": "162",
-							"checksum": "SHA-256:83320249BEAF1BD023A7E42DA0A8717421681B62F070331DF6084048F8D763F8"
-						}, 
-						{
-							"host": "i686-arm-gnu",
-							"url": "https://github.com/chipKIT32/chipKIT-drivers/releases/download/v2.0/chipKIT_USB_drivers_otherOSes_v2.zip",
-							"archiveFileName": "chipKIT_USB_drivers_otherOSes_v2.zip",
-							"size": "162",
-							"checksum": "SHA-256:83320249BEAF1BD023A7E42DA0A8717421681B62F070331DF6084048F8D763F8"
 						}
 					]
 				}

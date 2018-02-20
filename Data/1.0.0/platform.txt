@@ -4,7 +4,7 @@
 # For more info:
 
 
-name=Olimex PIC boards
+name=Sybas PIC Boards
 version=1.0.0
 
 # PIC32 compile variables
