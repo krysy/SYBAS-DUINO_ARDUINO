@@ -138,10 +138,10 @@
 //#define	PIN_BTN1	22  // has pull up
 
 //#define PIN_OC1		76
-#define	PIN_OC2		11
-#define	PIN_OC3		12
-#define	PIN_OC4		13
-#define	PIN_OC5		14
+#define	PIN_OC2		76
+#define	PIN_OC3		77
+#define	PIN_OC4		78
+#define	PIN_OC5		81
 /*
 #define PIN_IC1		22
 #define PIN_IC2		23
@@ -198,14 +198,14 @@ const static uint8_t SCK  = 4;		// PIC32 SCK2
 #define DIO3	4
 #define DIO4	5
 #define DIO5	6
-#define DIO6	11
-#define DIO7	7
-#define DIO8	12
-#define DIO9	8
-#define DIO10	13
-#define DIO11	9
-#define DIO12	14
-#define DIO13	10
+#define DIO6	7
+#define DIO7	8
+#define DIO8	9
+#define DIO9	10
+#define DIO10	11
+#define DIO11	12
+#define DIO12	13
+#define DIO13	14
 /* ------------------------------------------------------------ */
 /*					Analog Pins									*/
 /* ------------------------------------------------------------ */
@@ -214,14 +214,14 @@ const static uint8_t SCK  = 4;		// PIC32 SCK2
 ** pin number.
 */
 // Note that the name of the macro is ANx instead of Ax. Here the x is not the number of the pin on the analog connector (we have no such connector), but the number of the analog channel.
-#define	A0		15
-#define	A1		16
-#define A2		17
-#define A3		18
-#define A4		19
-#define A5		20
-#define A6		21
-#define A7		22
+#define	A0		33
+#define	A1		32
+#define A2		27
+#define A3		26
+#define A4		20
+#define A5		21
+#define A6		22
+#define A7		23
 
 /* ------------------------------------------------------------ */
 /*					Change Notice Pins							*/

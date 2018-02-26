@@ -116,23 +116,21 @@ const uint32_t	port_to_tris_PGM[] = {
 const uint8_t	digital_pin_to_port_PGM[] = {
 
 	NOT_A_PORT, 	// inexisting 0
-	
 	_IOPORT_PF,     //RF2, DIO0
 	_IOPORT_PF,		//RF8, DIO1
-	
 	_IOPORT_PE,		//RE0, DIO2
 	_IOPORT_PE,		//RE1, DIO3
 	_IOPORT_PE,		//RE2, DIO4
-	_IOPORT_PE,		//RE3, DIO5	
-	_IOPORT_PE,		//RE4, DIO7
-	_IOPORT_PE,		//RE5, DIO9
-	_IOPORT_PE,		//RE6, DIO11
-	_IOPORT_PE,		//RE7, DIO13
-
+	_IOPORT_PE,		//RE3, DIO5
 	_IOPORT_PD,		//RD1, DIO6
+	_IOPORT_PE,		//RE4, DIO7
+	
 	_IOPORT_PD,		//RD2, DIO8
+	_IOPORT_PE,		//RE5, DIO9
 	_IOPORT_PD,		//RD3, DIO10
+	_IOPORT_PE,		//RE6, DIO11
 	_IOPORT_PD,		//RD4, DIO12
+	_IOPORT_PE,		//RE7, DIO13
 	
 	_IOPORT_PB,		//RB9, AN0
 	_IOPORT_PB,		//RB8, AN1
@@ -151,23 +149,21 @@ const uint8_t	digital_pin_to_port_PGM[] = {
 */
 const uint16_t	digital_pin_to_bit_mask_PGM[] = {
 	_BV( 0 ), 	// inexisting 0
-	
 	_BV( 2 ),	//RF2, DIO0
 	_BV( 8 ),	//RF8, DIO1
-	
 	_BV( 0 ),	//RE0, DIO2
 	_BV( 1 ),	//RE1, DIO3
 	_BV( 2 ),	//RE2, DIO4
 	_BV( 3 ),	//RE3, DIO5
-	_BV( 4 ),	//RE4, DIO7
-	_BV( 5 ),	//RE5, DIO9
-	_BV( 6 ),	//RE6, DIO11
-	_BV( 7 ),	//RE7, DIO13
-	
 	_BV( 1 ),	//RD1, DIO6
+	_BV( 4 ),	//RE4, DIO7
+	
 	_BV( 2 ),	//RD2, DIO8
+	_BV( 5 ),	//RE5, DIO9
 	_BV( 3 ),	//RD3, DIO10
+	_BV( 6 ),	//RE6, DIO11
 	_BV( 4 ),	//RD4, DIO12
+	_BV( 7 ),	//RE7, DIO13
 	
 	_BV( 9 ),	//RB9, AN0
 	_BV( 8 ),	//RB8, AN1
@@ -186,23 +182,20 @@ const uint16_t	digital_pin_to_bit_mask_PGM[] = {
 */
 const uint16_t	digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER, 	// inexisting 0
-	
-	NOT_ON_TIMER, 	// RF2, DIO0
-	NOT_ON_TIMER, 	// RF8, DIO1
-	
-	NOT_ON_TIMER, 	// RE0, DIO2 
-	NOT_ON_TIMER,  // RE1, DIO3
-	NOT_ON_TIMER,  // RE2, DIO4
-	NOT_ON_TIMER,  // RE3, DIO5
-	NOT_ON_TIMER,	//RE4, DIO7	
-	NOT_ON_TIMER,	//RE5, DIO9
-	NOT_ON_TIMER,	//RE6, DIO11
-	NOT_ON_TIMER,	//RE7, DIO13
-	
+	NOT_ON_TIMER , 	// RF2, DIO0
+	NOT_ON_TIMER , 	// RF8, DIO1
+	NOT_ON_TIMER , 	// RE0, DIO2 
+	NOT_ON_TIMER ,  // RE1, DIO3
+	NOT_ON_TIMER ,  // RE2, DIO4
+	NOT_ON_TIMER ,  // RE3, DIO5
 	_TIMER_OC2,		//RD1, DIO6/PWM1
+	NOT_ON_TIMER,	//RE4, DIO7	
 	_TIMER_OC3,		//RD2, DIO8/PWM2
+	NOT_ON_TIMER,	//RE5, DIO9
 	_TIMER_OC4,		//RD3, DIO10/PWM3
+	NOT_ON_TIMER,	//RE6, DIO11
 	_TIMER_OC5,		//RD4, DIO12/PWM4
+	NOT_ON_TIMER,	//RE7, DIO13
 	
 	NOT_ON_TIMER,	//RB9, AN0
 	NOT_ON_TIMER,	//RB8, AN1
@@ -221,23 +214,20 @@ const uint16_t	digital_pin_to_timer_PGM[] = {
 //#if defined(_NOT_USED_)
 const uint8_t digital_pin_to_analog_PGM[] = {
 	NOT_ANALOG_PIN, 	// inexisting 0
-	
 	NOT_ANALOG_PIN, 	//RF2, DIO0
 	NOT_ANALOG_PIN,		//RF8, DIO1
-	
 	NOT_ANALOG_PIN, 	//RE0, DIO2 
 	NOT_ANALOG_PIN, 	//RE1, DIO3
 	NOT_ANALOG_PIN, 	//RE2, DIO4
 	NOT_ANALOG_PIN,		//RE3, DIO5
-	NOT_ANALOG_PIN,		//RE4, DIO7	
-	NOT_ANALOG_PIN,		//RE5, DIO9
-	NOT_ANALOG_PIN,		//RE6, DIO11
-	NOT_ANALOG_PIN,		//RE7, DIO13
-	
 	NOT_ANALOG_PIN,		//RD1, DIO6/PWM1
+	NOT_ANALOG_PIN,		//RE4, DIO7	
 	NOT_ANALOG_PIN,		//RD2, DIO8/PWM2
+	NOT_ANALOG_PIN,		//RE5, DIO9
 	NOT_ANALOG_PIN,		//RD3, DIO10/PWM3
+	NOT_ANALOG_PIN,		//RE6, DIO11
 	NOT_ANALOG_PIN,		//RD4, DIO12/PWM4
+	NOT_ANALOG_PIN,		//RE7, DIO13
 	
 	_BOARD_AN9,		//RB9, AN0
 	_BOARD_AN8,		//RB8, AN1

@@ -21,7 +21,7 @@ PIC32_T795H.bootloader.lock_bits=0x0F
 PIC32_T795H.build.board=_BOARD_PIC32_T795H_
 PIC32_T795H.build.extra_flags=-D_USE_USB_FOR_SERIAL_
 PIC32_T795H.build.mcu=32MX795F512H
-PIC32_T795H.build.f_cpu=90000000L
+PIC32_T795H.build.f_cpu=80000000L
 PIC32_T795H.build.core=pic32
 PIC32_T795H.build.variant=DUINO-E13
 ###############################################################
