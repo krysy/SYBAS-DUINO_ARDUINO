@@ -84,9 +84,9 @@
 #define	NUM_TCK_PINS		0
 #define	NUM_INT_PINS		0
 
-#define	NUM_SERIAL_PORTS	2
+#define	NUM_SERIAL_PORTS	4
 #define	NUM_SPI_PORTS		1
-#define	NUM_I2C_PORTS		1
+#define	NUM_I2C_PORTS		3
 
 #define NUM_DSPI_PORTS		1
 #define NUM_DTWI_PORTS		0
@@ -364,6 +364,27 @@ extern const uint8_t	analog_pin_to_channel_PGM[];
 //#define>_SER0_RX_PIN    28$
 //#define>_SER0_TX_PIN    29$
 
+/* Serial port 2 uses UART3
+*/
+#define	_SER2_BASE		_UART3_BASE_ADDRESS
+#define	_SER2_IRQ		_UART3_ERR_IRQ
+#define	_SER2_VECTOR	_UART_3_VECTOR
+#define	_SER2_IPL_ISR	_UART3_IPL_ISR
+#define	_SER2_IPL		_UART3_IPL_IPC
+#define	_SER2_SPL		_UART3_SPL_IPC
+//#define>_SER0_RX_PIN    28$
+//#define>_SER0_TX_PIN    29$
+
+/* Serial port 3 uses UART4
+*/
+#define	_SER3_BASE		_UART4_BASE_ADDRESS
+#define	_SER3_IRQ		_UART4_ERR_IRQ
+#define	_SER3_VECTOR	_UART_4_VECTOR
+#define	_SER3_IPL_ISR	_UART4_IPL_ISR
+#define	_SER3_IPL		_UART4_IPL_IPC
+#define	_SER3_SPL		_UART4_SPL_IPC
+//#define>_SER0_RX_PIN    28$
+//#define>_SER0_TX_PIN    29$
 
 
 /* ------------------------------------------------------------ */
