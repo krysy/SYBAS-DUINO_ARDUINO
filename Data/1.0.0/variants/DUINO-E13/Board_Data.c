@@ -143,6 +143,40 @@ const uint8_t	digital_pin_to_port_PGM[] = {
 	_IOPORT_PB,		//RB3, AN6
 	_IOPORT_PB,		//RB2, AN7
 	
+	_IOPORT_PA,		//RA10, DIO14
+	_IOPORT_PA,		//RA15, DIO15
+	_IOPORT_PA,		//RA14, DIO16
+	_IOPORT_PB,		//RB14, DIO17
+	_IOPORT_PF,		//RF5, DIO18
+	_IOPORT_PF,		//RF4, DIO19
+	_IOPORT_PA,		//RA7, DIO20
+	_IOPORT_PA,		//RA6, DIO21
+	_IOPORT_PB,		//RB0, DIO22
+	_IOPORT_PD,		//RD15, DIO23
+	
+	_IOPORT_PD,		//RD14, DIO24
+	_IOPORT_PA,		//RA2, DIO25
+	_IOPORT_PA,		//RA3, DIO26
+	_IOPORT_PG,		//RG12, DIO27
+	_IOPORT_PG,		//RG13, DIO28
+	_IOPORT_PC,		//RC14, DIO29
+	_IOPORT_PC,		//RC4, DIO30
+	
+	_IOPORT_PD,		//RD0, DIO31
+	_IOPORT_PD,		//RD10, DIO32
+	_IOPORT_PD,		//RD12, DIO33
+	_IOPORT_PA,		//RA4, DIO34
+	_IOPORT_PC,		//RC3, DIO35
+	_IOPORT_PC,		//RC2, DIO36
+	_IOPORT_PC,		//RC1, DIO37
+	
+	_IOPORT_PE,		//RE9, DIO38
+	_IOPORT_PD,		//RD12, DIO39
+	_IOPORT_PB,		//RB1, DIO40
+	_IOPORT_PF,		//RF12, DIO41
+	_IOPORT_PF,		//RF13, DIO42
+	
+	
 };
 
 /* ------------------------------------------------------------ */
@@ -177,6 +211,39 @@ const uint16_t	digital_pin_to_bit_mask_PGM[] = {
 	_BV( 4 ),	//RB4, AN5
 	_BV( 3 ),	//RB3, AN6
 	_BV( 2 ),	//RB2, AN7
+	
+	_BV(10),	//RA10, DIO14
+	_BV(15),		//RA15, DIO15
+	_BV(14),		//RA14, DIO16
+	_BV(14),		//RB14, DIO17
+	_BV(5),		//RF5, DIO18
+	_BV(4),		//RF4, DIO19
+	_BV(7),		//RA7, DIO20
+	_BV(6),		//RA6, DIO21
+	_BV(0),		//RB0, DIO22
+	_BV(15),		//RD15, DIO23
+	
+	_BV(14),		//RD14, DIO24
+	_BV(2),		//RA2, DIO25
+	_BV(3),		//RA3, DIO26
+	_BV(12),		//RG12, DIO27
+	_BV(13),		//RG13, DIO28
+	_BV(14),		//RC14, DIO29
+	_BV(4),		//RC4, DIO30
+	
+	_BV(0),		//RD0, DIO31
+	_BV(10),		//RD10, DIO32
+	_BV(12),		//RD12, DIO33
+	_BV(4),		//RA4, DIO34
+	_BV(3),		//RC3, DIO35
+	_BV(2),		//RC2, DIO36
+	_BV(1),		//RC1, DIO37
+	
+	_BV(9),		//RE9, DIO38
+	_BV(12),		//RD12, DIO39
+	_BV(1),		//RB1, DIO40
+	_BV(12),		//RF12, DIO41
+	_BV(13),		//RF13, DIO42
 };
 
 /* ------------------------------------------------------------ */

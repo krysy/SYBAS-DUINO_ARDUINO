@@ -1,5 +1,5 @@
 # Initial version of Olimex based on chipKIT Core and platform
-# -------------------------------
+# ------------------------------
 #
 # For more info:
 
