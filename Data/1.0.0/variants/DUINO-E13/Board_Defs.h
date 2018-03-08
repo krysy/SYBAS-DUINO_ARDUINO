@@ -77,7 +77,7 @@
 #define	CONU_9	10	// SCK
 #define	CONU_10	19	// SS*/
 
-#define	NUM_DIGITAL_PINS	14
+#define	NUM_DIGITAL_PINS	43
 #define	NUM_ANALOG_PINS		8
 #define NUM_OC_PINS			4
 #define	NUM_IC_PINS			0
@@ -192,20 +192,20 @@ const static uint8_t SCK  = 4;		// PIC32 SCK2
 ** used to map an digital pin number to the corresponding digital
 ** pin number.
 */
-#define DIO0	1
-#define DIO1	2
-#define DIO2	3
-#define DIO3	4
-#define DIO4	5
-#define DIO5	6
-#define DIO6	11
-#define DIO7	7
-#define DIO8	12
-#define DIO9	8
-#define DIO10	13
-#define DIO11	9
-#define DIO12	14
-#define DIO13	10
+#define DIO0  1
+#define DIO1  2
+#define DIO2  3
+#define DIO3  4
+#define DIO4  13
+#define DIO5  12
+#define DIO6  11
+#define DIO7  7
+#define DIO8  5
+#define DIO9  8
+#define DIO10 14
+#define DIO11 9
+#define DIO12 6
+#define DIO13 10
 /* ------------------------------------------------------------ */
 /*					Analog Pins									*/
 /* ------------------------------------------------------------ */
