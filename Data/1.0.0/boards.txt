@@ -1,4 +1,4 @@
-##############################################################1
+###############################################################
 PIC32_T795H.name=DUINO-E13
 PIC32_T795H.group=Sybas
 
@@ -25,3 +25,30 @@ PIC32_T795H.build.f_cpu=18000000L
 PIC32_T795H.build.core=pic32
 PIC32_T795H.build.variant=DUINO-E13
 ###############################################################
+
+###############################################################
+mega_pic32.name=DUINO32
+mega_pic32.group=Sybas
+
+# new items
+mega_pic32.platform=pic32
+mega_pic32.build.board=_BOARD_MEGA_
+mega_pic32.ldscript=chipKIT-application-32MX795F512.ld
+# end of new items
+
+mega_pic32.upload.protocol=stk500v2
+mega_pic32.upload.maximum_size=520192
+mega_pic32.upload.maximum_data_size=131072
+mega_pic32.upload.speed=115200
+mega_pic32.upload.tool=pic32prog
+
+mega_pic32.build.mcu=32MX795F512L
+mega_pic32.build.f_cpu=18000000L
+mega_pic32.build.core=pic32
+mega_pic32.build.variant=Max32
+
+mega_pic32.usb.enabled=true
+mega_pic32.usb.default=z_custom
+
+###############################################################
+

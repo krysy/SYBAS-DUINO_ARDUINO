@@ -206,6 +206,27 @@ const static uint8_t SCK  = 4;		// PIC32 SCK2
 #define DIO11 9
 #define DIO12 6
 #define DIO13 10
+#define DIO14  1
+ 
+#define DIO23  23
+#define DIO24 24
+#define DIO25 25
+#define DIO26 26
+#define DIO27 27
+#define DIO28  28
+#define DIO29  29
+#define DIO30  30
+#define DIO31  31
+#define DIO32  32
+#define DIO33  33
+#define DIO34  34
+#define DIO36  35
+#define DIO37  36
+#define DIO38  37
+#define DIO39 38
+#define DIO40 39
+#define DIO41 40
+#define DIO42 41
 /* ------------------------------------------------------------ */
 /*					Analog Pins									*/
 /* ------------------------------------------------------------ */
