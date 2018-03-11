@@ -22,13 +22,12 @@
 						"online": "https://www.google.com"
 					},
 					"url": "https://github.com/krysy/SYBAS-DUINO_ARDUINO/blob/master/Data/1.0.0.zip?raw=true",
-					"checksum": "SHA-256:38579B6AB1B739558E466D42BF025B0394F57E30F053EFBECB28AB4D523984D7",
+					"checksum": "SHA-256:02A280A4C1FF7FA08E1874E0F2A21200FE4FCA0B8A5F533A143A1BB82DCA1B20",
 					"archiveFileName": "1.0.0.zip",
-					"size": "1482752",
+					"size": "1474560",
 					"boards":
 					[
 						{"name": "DUINO-E13"},
-						{"name": "DUINO32"}
 					],
 					"toolsDependencies":
 					[
