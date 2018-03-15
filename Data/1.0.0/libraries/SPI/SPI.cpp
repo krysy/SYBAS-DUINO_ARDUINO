@@ -89,7 +89,7 @@ void SPIClass::begin() {
         mapPps(pinMOSI, ppsMOSI);
 #endif       
         pspi->sxCon.set = (1<<_SPICON_MSTEN) | (1<<_SPICON_ON);
-        setClockDivider(SPI_CLOCK_DIV128);
+        setClockDivider(SPI_CLOCK_DIV2);
         setDataMode(SPI_MODE0);
     }
 
