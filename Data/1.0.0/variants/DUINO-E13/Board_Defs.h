@@ -92,6 +92,61 @@
 /* ------------------------------------------------------------ */
 
 
+/* ------------------------------------------------------------ */
+/*						DIO Declarations						*/
+/* ------------------------------------------------------------ */
+
+
+#define DIO0    0
+#define DIO1    1
+#define DIO2    37
+#define DIO3    36
+#define DIO4    9
+#define DIO5    6
+#define DIO6    5
+#define DIO7    33
+#define DIO8    35
+#define DIO9    32
+#define DIO10   10
+#define DIO11	31
+#define DIO12   34
+#define DIO13   30
+#define DIO14   44
+#define DIO15	20
+#define DIO16	21
+#define DIO17	68
+#define DIO18	16
+#define DIO19	17
+#define DIO20	87
+#define DIO21	80
+#define DIO22	54
+#define DIO23	18
+#define DIO24	19
+#define DIO25	12
+#define DIO26	13
+#define DIO27	83
+#define DIO28	84
+#define DIO29	4
+#define DIO30	11
+#define DIO31	3
+#define DIO32	38
+#define DIO33	8
+#define DIO34	11
+#define DIO35	23
+#define DIO36	22
+#define DIO37	86
+#define DIO38	7
+#define DIO39	2
+#define DIO40	55
+#define DIO41	15
+#define DIO42	14
+
+#define IN0		2
+#define IN1		7
+#define IN2		86
+#define IN3		22
+#define IN4		23
+#define IN5		72
 
 /* ------------------------------------------------------------ */
 /*						LED Declarations						*/
@@ -101,15 +156,15 @@
 /* Define the pin numbers for the LEDs
 */
 #define	LED1	9
-#define	LED2	34
+#define	LED2	6
 #define LED3	5
 
 /* ------------------------------------------------------------ */
 /*					Button Declarations							*/
 /* ------------------------------------------------------------ */
 
-#define BUTTON1		35
-#define BUTTON2		34
+#define BUTTON1		9
+#define BUTTON2		6
 #define BUTTON3		5
 
 /* ------------------------------------------------------------ */
@@ -183,6 +238,17 @@ static const uint8_t SCK  = 52;		// PIC32 SCK2A
 ** used to map an analog pin number to the corresponding digital
 ** pin number.
 */
+
+#define A0		63	
+#define A1		62
+#define A2		61
+#define A3		60
+#define A4		59
+#define A5		58
+#define A6		57
+#define A7		56
+
+/*
 #define	A0		54
 #define	A1		55
 #define	A2		56
@@ -199,7 +265,7 @@ static const uint8_t SCK  = 52;		// PIC32 SCK2A
 #define	A13		67
 #define	A14		68
 #define	A15		69
-
+*/
 /* ------------------------------------------------------------ */
 /*					Change Notice Pins							*/
 /* ------------------------------------------------------------ */
@@ -356,23 +422,23 @@ extern const uint32_t   digital_pin_to_cn_PGM[];
 
 /* The Digilent DSPI and standard SPI libraries uses these ports.
 */
-#define	_DSPI0_BASE			_SPI2_BASE_ADDRESS
-#define	_DSPI0_ERR_IRQ		_SPI2_ERR_IRQ
-#define	_DSPI0_RX_IRQ		_SPI2_RX_IRQ
-#define	_DSPI0_TX_IRQ		_SPI2_TX_IRQ
-#define	_DSPI0_VECTOR		_SPI_2_VECTOR
-#define	_DSPI0_IPL_ISR		_SPI2_IPL_ISR
-#define	_DSPI0_IPL			_SPI2_IPL_IPC
-#define	_DSPI0_SPL			_SPI2_SPL_IPC
+#define	_DSPI0_BASE			_SPI1_BASE_ADDRESS
+#define	_DSPI0_ERR_IRQ		_SPI1_ERR_IRQ
+#define	_DSPI0_RX_IRQ		_SPI1_RX_IRQ
+#define	_DSPI0_TX_IRQ		_SPI1_TX_IRQ
+#define	_DSPI0_VECTOR		_SPI_1_VECTOR
+#define	_DSPI0_IPL_ISR		_SPI1_IPL_ISR
+#define	_DSPI0_IPL			_SPI1_IPL_IPC
+#define	_DSPI0_SPL			_SPI1_SPL_IPC
 
-#define	_DSPI1_BASE			_SPI1_BASE_ADDRESS
-#define	_DSPI1_ERR_IRQ		_SPI1_ERR_IRQ
-#define	_DSPI1_RX_IRQ		_SPI1_RX_IRQ
-#define	_DSPI1_TX_IRQ		_SPI1_TX_IRQ
-#define	_DSPI1_VECTOR		_SPI_1_VECTOR
-#define	_DSPI1_IPL_ISR		_SPI1_IPL_ISR
-#define	_DSPI1_IPL			_SPI1_IPL_IPC
-#define	_DSPI1_SPL			_SPI1_SPL_IPC
+#define	_DSPI1_BASE			_SPI2_BASE_ADDRESS
+#define	_DSPI1_ERR_IRQ		_SPI2_ERR_IRQ
+#define	_DSPI1_RX_IRQ		_SPI2_RX_IRQ
+#define	_DSPI1_TX_IRQ		_SPI2_TX_IRQ
+#define	_DSPI1_VECTOR		_SPI_2_VECTOR
+#define	_DSPI1_IPL_ISR		_SPI2_IPL_ISR
+#define	_DSPI1_IPL			_SPI2_IPL_IPC
+#define	_DSPI1_SPL			_SPI2_SPL_IPC
 
 // #define	_SPI3_ERR_IRQ	_SPI1A_ERR_IRQ	//this declaration missing from the
 										//Microchip header file

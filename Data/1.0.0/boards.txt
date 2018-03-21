@@ -18,8 +18,11 @@ PIC32_T795H.bootloader.extended_fuses=0x00
 PIC32_T795H.bootloader.unlock_bits=0x3F
 PIC32_T795H.bootloader.lock_bits=0x0F
 
+PIC32_T795H.usb.enabled=true
+PIC32_T795H.usb.default=a_cdcacm
+
 PIC32_T795H.build.board=_BOARD_PIC32_T795H_
-PIC32_T795H.build.extra_flags=-D_USE_USB_FOR_SERIAL_
+PIC32_T795H.build.extra_flags=-D__USB_ENABLED__ -D__USB_CDCACM__ -D__SERIAL_IS_USB__
 PIC32_T795H.build.mcu=32MX795F512L
 PIC32_T795H.build.f_cpu=18000000L
 PIC32_T795H.build.core=pic32
