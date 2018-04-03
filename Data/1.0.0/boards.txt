@@ -1,31 +1,41 @@
 ###############################################################
-PIC32_T795H.name=DUINO-E13
-PIC32_T795H.group=Sybas
+mega_pic32.name=DUINO-E13
+mega_pic32.group=Sybas
 
-PIC32_T795H.platform=pic32
-PIC32_T795H.ccflags=ffff
-PIC32_T795H.ldscript=chipKIT-application-32MX795F512.ld
+mega_pic32.platform=pic32
+mega_pic32.ccflags=ffff
+mega_pic32.ldscript=chipKIT-application-32MX795F512.ld
 
-PIC32_T795H.upload.protocol=sybasLoader
-PIC32_T795H.upload.maximum_size=520192
-PIC32_T795H.upload.speed=57600
+mega_pic32.upload.protocol=sybasLoader
+mega_pic32.upload.maximum_size=520192
+mega_pic32.upload.speed=57600
 
-PIC32_T795H.bootloader.low_fuses=0xff
-PIC32_T795H.bootloader.high_fuses=0xdd
-PIC32_T795H.bootloader.extended_fuses=0x00
-#PIC32_T795H.bootloader.path=not-supported
-#PIC32_T795H.bootloader.file=not-supported
-PIC32_T795H.bootloader.unlock_bits=0x3F
-PIC32_T795H.bootloader.lock_bits=0x0F
+mega_pic32.bootloader.low_fuses=0xff
+mega_pic32.bootloader.high_fuses=0xdd
+mega_pic32.bootloader.extended_fuses=0x00
+#mega_pic32.bootloader.path=not-supported
+#mega_pic32.bootloader.file=not-supported
+mega_pic32.bootloader.unlock_bits=0x3F
+mega_pic32.bootloader.lock_bits=0x0F
 
-PIC32_T795H.usb.enabled=true
-PIC32_T795H.usb.default=a_cdcacm
+mega_pic32.usb.enabled=true
+mega_pic32.usb.default=z_custom
+#mega_pic32.compiler.define=-D_USE_USB_FOR_SERIAL_ -D_USB -D_USE_USB_IRQ_
 
-PIC32_T795H.build.board=_BOARD_PIC32_T795H_
-PIC32_T795H.build.extra_flags=-D__USB_ENABLED__ -D__USB_CDCACM__ -D__SERIAL_IS_USB__
-PIC32_T795H.build.mcu=32MX795F512L
-PIC32_T795H.build.f_cpu=18000000L
-PIC32_T795H.build.core=pic32
-PIC32_T795H.build.variant=DUINO-E13
+mega_pic32.a_cdcacm=Serial
+mega_pic32.a_cdcacm.build.extra_flags=-D__USB_ENABLED__ -D__USB_CDCACM__ -D__SERIAL_IS_USB__
+
+mega_pic32.build.board=_BOARD_MEGA_
+#mega_pic32.build.extra_flags=-D__USB_ENABLED__ -D__USB_CDCACM__ -D__SERIAL_IS_USB__
+mega_pic32.build.mcu=32MX795F512L
+mega_pic32.build.f_cpu=18000000L
+mega_pic32.build.core=pic32
+mega_pic32.build.variant=DUINO-E13
 ###############################################################
 
+mega_pic32.menu.USB.z_custom=Custom / Disabled
+mega_pic32.menu.USB.z_custom.build.extra_flags=
+mega_pic32.menu.USB.a_cdcacm=Serial
+mega_pic32.menu.USB.a_cdcacm.build.extra_flags=-D__USB_ENABLED__ -D__USB_CDCACM__ -D__SERIAL_IS_USB__
+mega_pic32.menu.USB.b_cdcacm_km=Serial, Keyboard & Mouse
+mega_pic32.menu.USB.b_cdcacm_km.build.extra_flags=-D__USB_ENABLED__ -D__USB_CDCACM_KM__ -D__SERIAL_IS_USB__

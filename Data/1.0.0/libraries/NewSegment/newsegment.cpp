@@ -1,7 +1,8 @@
 #include "NewSegment.h"
-extern "C" {
+
+/*extern "C" {
 #include "tinyprintf.h"
-}
+}*/
 
 
 const int digits[] = { 0x3F, //0
@@ -22,6 +23,14 @@ const int digits[] = { 0x3F, //0
 						0x71//F
 };
 
+const int letters[] = {
+						0b1110110,//H
+						0b0110000,//I
+						0b0111000,//L
+						0b0111111,//O
+						0b1111001,//E
+						0b1010000//r
+};
 
 NewSegment::NewSegment()
 {
@@ -33,23 +42,66 @@ NewSegment::NewSegment()
 	pinMode(F, OUTPUT);
 	pinMode(G, OUTPUT);
 	pinMode(mpx, OUTPUT);
-	temp = false;
+	pinMode(DOT, OUTPUT);
+	wasMultiplex = false;
+	mode = MODE_DIGIT;
 }
 
-
+SegmentMode NewSegment::returnMode() {
+	return mode;
+}
 void NewSegment::setNumber(int number) {
-	if (!(number<0 || number >255))
+	if (mode==MODE_DIGIT)
 	{
-		char hex[1];
-		if (number<16) {
-			tfp_sprintf(hex, "%X", number);
-			setDigits('0', hex[0]);
-		}
-		else {
-			tfp_sprintf(hex, "%X", number);
-			setDigits(hex[0], hex[1]);
+		if (!(number<0 || number >255))
+		{
+			char hex[1];
+			if (number<16) {
+				sprintf(hex, "%X", number);
+				setDigits('0', hex[0]);
+			}
+			else {
+				sprintf(hex, "%X", number);
+				setDigits(hex[0], hex[1]);
+			}
 		}
 	}
+}
+
+void NewSegment::setState(LogicLevel desiredLevel) {
+	if (mode==MODE_LOGIC)
+	{
+		switch (desiredLevel)
+		{
+		case LOGIC_HIGH:
+			tempDig1 = 'H';
+			tempDig2 = 'I';
+			break;
+		case LOGIC_LOW:
+			tempDig1 = 'L';
+			tempDig2 = 'O';
+			break;
+		case LOGIC_ERR:
+			tempDig1 = 'E';
+			tempDig2 = 'R';
+			break;
+		default:
+			break;
+		}
+	}
+}
+
+void NewSegment::setVoltage(double volts) {
+	if (mode==MODE_VOLTAGE)
+	{
+		char buff[5];
+		sprintf(buff,"%0.2f",volts);
+		setDigits(buff[0], buff[2]);
+	}
+}
+void NewSegment::setMode(SegmentMode desiredMode) {
+	mode = desiredMode;
+	
 }
 void NewSegment::setDigits(char cr1, char cr2) {
 	tempDig1 = cr1;
@@ -116,13 +168,30 @@ void NewSegment::setSegment(char d1) {
 	case 'F':
 		virtualPort(digits[15]);
 		break;
+	case 'H':
+		virtualPort(letters[0]);
+		break;
+	case 'I':
+		virtualPort(letters[1]);
+		break;
+	case 'L':
+		virtualPort(letters[2]);
+		break;
+	case 'O':
+		virtualPort(letters[3]);
+
+		break;
+	case 'R':
+		virtualPort(letters[5]);
+		break;
+		break;
 	default:
 		break;
 	}
 }
-
+/*
 void NewSegment::initMultiplex(isrFunc myISR) {
-	temp = false;
+	wasMultiplex = false;
 	T3CONCLR = T3CON_ENABLE_BIT;
 	T3CONCLR = T3CON_PRESCALER_BITS;
 	TMR3 = 128;
@@ -136,20 +205,38 @@ void NewSegment::initMultiplex(isrFunc myISR) {
 
 	setIntEnable(_TIMER_3_IRQ);
 }
+*/
+void NewSegment::toggleDot() {
+	isDot = !isDot;
+}
 
 void NewSegment::multiplex() {
-	if (temp == false)
+	if (wasMultiplex == false)
 	{
+		if (mode==MODE_VOLTAGE && isDot==true)
+		{
+			digitalWrite(DOT, HIGH);
+		}
+		else
+		{
+			digitalWrite(DOT, LOW);
+		}
 		setSegment(tempDig1);
 		digitalWrite(mpx, 0);
-		temp = true;
+		wasMultiplex = true;
 	}
 	else
 	{
+		if (mode == MODE_VOLTAGE && isDot==true)
+		{
+			digitalWrite(DOT, LOW);
+		}
+		else
+		{
+			digitalWrite(DOT, LOW);
+		}
 		setSegment(tempDig2);
 		digitalWrite(mpx, 1);
-		temp = false;
+		wasMultiplex = false;
 	}
-	TMR3 = 2048;
-	clearIntFlag(_TIMER_3_IRQ);
 }
